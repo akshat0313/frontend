@@ -36,7 +36,9 @@ joinBtn.onclick = async () => {
 
     const identity = document.getElementById("identity").value;
 
-    const response = await fetch("http://localhost:8080/join", {
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${API_URL}/join`, {
 
         method: "POST",
 
